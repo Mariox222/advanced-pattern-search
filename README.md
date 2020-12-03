@@ -1,13 +1,14 @@
-# PluginTemplate
+# Pattern-search
 
-Template CMake project for x64dbg plugins.
+plugin for x64dbg
+
+## Description
+
+find structures or patterns in a process module
 
 ## Using the template
 
-You can click the green *Use this template* button. See the article [*Creating a repository from a template*
-](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) by GitHub for more details.
-
-Alternatively you can download a ZIP of this repository and set up the template locally.
+## Installing
 
 ## Building
 
