@@ -14,4 +14,5 @@ void pluginStop()
 //Do GUI/Menu related things here.
 void pluginSetup()
 {
+
 }
