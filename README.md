@@ -1,12 +1,13 @@
 # Advanced-pattern-search
 
 plugin for x64dbg
+**Under development**
 
 ## Description
 
-find structures or patterns in a process module
+Advanced Search for patterns inddd proccess memory
 
-## Using the template
+## Usage
 
 ## Installing
 
