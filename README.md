@@ -1,4 +1,4 @@
-# Pattern-search
+# Advanced-pattern-search
 
 plugin for x64dbg
 
