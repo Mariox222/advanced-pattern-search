@@ -1,0 +1,28 @@
+#pragma once
+enum class lineType {
+	literal_bytes,
+	int_declaration,
+	float_declaration,
+	double_declaration,
+	string_declaration,
+	wildcard_line,
+	emptyLine,
+	invalidLine,
+	char_declaration,
+	unsigned_char_declaration,
+	signed_char_declaration,
+	unsigned_int_declaration,
+	signed_int_declaration,
+	short_int_declaration,
+	unsigned_short_int_declaration,
+	signed_short_int_declaration,
+	long_int_declaration,
+	signed_long_int_declaration,
+	unsigned_long_int_declaration,
+	long_long_int_declaration,
+	unsigned_long_long_int_declaration,
+	long_double_declaration,
+	wchar_t_declaration,
+	char16_t_declaration,
+	char32_t_declaration
+};
