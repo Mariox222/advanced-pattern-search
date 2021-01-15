@@ -1,20 +1,44 @@
+#include <iostream>
+#include <fstream>
+#include <string>
 #include "plugin.h"
 #include "advancedPatternSearch.h"
 
 static bool mempat(int argc, char* argv[]) {
 	if (argc != 2)
 	{
-		dputs("usage: \"mempat line\"\n");
+		dputs("usage: mempat \"path\\to\\file.txt\"\n");
 		return false;
 	}
     std::vector<std::string> inputs;
-    std::string str = argv[1];
-    inputs.push_back(std::string(argv[1]));
-    std::string result = createOutput(inputs);
+
+	std::fstream fileStream;
+
+	fileStream.open(argv[1], std::ios::in);
+	if (fileStream.is_open()) {
+		std::string tp;
+		while (std::getline(fileStream, tp)) {
+			inputs.push_back(tp);
+		}
+
+		fileStream.close();
+	}
+	else {
+		dputs("error opening the file");
+		return true;
+	}
+
+	std::string result;
+	try{
+		result = createOutput(inputs); 
+	}
+	catch (const std::invalid_argument& e) {
+		dprintf("%s\n", e.what());
+		return true;
+	}
     dprintf("%s\n", result.c_str());
 
-	return true;
-
+	return true; // C:\Users\Mario\Desktop\input.txt
 }
 
 //Initialize your plugin data here.
