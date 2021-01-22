@@ -3,7 +3,26 @@
 #include <string>
 #include "plugin.h"
 #include "advancedPatternSearch.h"
+#include "../mempatWindow.h"
 
+enum {
+	MEMORY_PATTERN
+};
+
+// menuentry callback
+PLUG_EXPORT void CBMENUENTRY(CBTYPE, PLUG_CB_MENUENTRY* info) {
+	switch (info->hEntry)
+	{
+	case MEMORY_PATTERN: {
+		// window here
+		OpenMemPatWindow();
+		
+	}
+	break;
+	}
+}
+
+// comand callback
 static bool mempat(int argc, char* argv[]) {
 	if (argc != 2)
 	{
@@ -51,10 +70,12 @@ bool pluginInit(PLUG_INITSTRUCT* initStruct)
 //Deinitialize your plugin data here.
 void pluginStop()
 {
+
 }
 
 //Do GUI/Menu related things here.
 void pluginSetup()
 {
+	_plugin_menuaddentry(hMenu, MEMORY_PATTERN, "Open window");
 
 }
