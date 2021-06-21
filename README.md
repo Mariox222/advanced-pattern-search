@@ -1,28 +1,25 @@
 # Advanced-pattern-search
 
 plugin for x64dbg
-**Under development**
+
 
 ## Description
 
-Advanced Search for patterns inddd proccess memory
+Displays how would C/C++ variables look in proccess memory
 
 ## Usage
 
-## Installing
-
-## Building
-
-From a Visual Studio command prompt:
-
+In the x64dbg, run the command:
 ```
-mkdir build && cd build
-cmake ..
+mempat path
+```
+where path is path to the text file with C variable values you want hex dump of.
+Example content of the input file:
+```
+int 100
+float 12.3
+double -0.12
 ```
 
-You will get `PluginTemplate.sln` that you can open in Visual Studio.
 
-Alternatively you can open this folder in Visual Studio/CLion/Qt Creator.
-
-![building animation](./building.gif)
 
